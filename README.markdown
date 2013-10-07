@@ -32,7 +32,7 @@ The output html will be like this:
     <meta name="description" content="default description" />
     <meta name="keywords" content="my,keyword" />
 
-Facebook support
+### Facebook support
 
     <% set_meta(:title=>"my title", :facebook=>{:title=>"album title test", :type=>"og_mysite_dev:album"}) %>
 
@@ -41,6 +41,18 @@ The output html will be like this:
     <meta name="title" content="my title"/>
     <meta property="og:title" content="album title test"/>
     <meta property="og:type" content="og_mysite_dev:album"/>
+
+### Custom property
+
+  <% set_meta(:custom=> {
+              :"article:author" => "http://...",
+              :"article:publisher" => "http://..."
+              }) %>
+
+The output html will be like this:
+
+    <meta property="article:author" content="http://..."/>
+    <meta property="article:publisher" content="http://..."/>
 
 
 Author
